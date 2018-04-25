@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:keepux/webpack-ng-hello.git",
   "author": "Michael Neal <iammichaelneal@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "3.5.5"
+  }
 }
