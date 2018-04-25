@@ -1,0 +1,8 @@
+{
+  "name": "webpack-ng-hello",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:keepux/webpack-ng-hello.git",
+  "author": "Michael Neal <iammichaelneal@gmail.com>",
+  "license": "MIT"
+}
