@@ -2,14 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './app.js', //bundle entry point
+    entry: './src/app.js', //bundle entry point from ./src/
     output: {
         path: path.resolve(__dirname, 'dist'), //output directory
         filename: '[name].js', // name of generated bundle
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'src/index.html', // from src
             inject: 'body',
         }),
     ],
