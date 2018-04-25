@@ -1,1 +1,2 @@
-document.write('hello friend');
+var msg = require('./contents.js');
+document.write(msg);
