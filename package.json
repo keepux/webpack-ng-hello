@@ -24,7 +24,19 @@
         "webpack-dev-server": "^2.7.1"
     },
     "dependencies": {
+        "@angular/common": "5.1.0",
+        "@angular/compiler": "5.1.0",
+        "@angular/core": "5.1.0",
+        "@angular/forms": "5.1.0",
+        "@angular/http": "^5.2.10",
+        "@angular/platform-browser": "5.1.0",
+        "@angular/platform-browser-dynamic": "5.1.0",
+        "@angular/router": "5.1.0",
         "@types/jquery": "^3.2.12",
-        "jquery": "^3.2.1"
+        "core-js": "^2.5.5",
+        "jquery": "^3.2.1",
+        "reflect-metadata": "^0.1.12",
+        "rxjs": "^6.0.0",
+        "zone.js": "^0.8.26"
     }
 }

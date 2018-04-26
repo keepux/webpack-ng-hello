@@ -7,6 +7,7 @@ module.exports = {
         extensions: ['.js', '.ts'],
     },
     entry: {
+        polyfills: './src/pollyfills.ts',
         main: './src/app.ts', //bundle entry point from ./src/
         vendor: './src/vendor.js', // seperate vendor code from app
     },
