@@ -45,4 +45,8 @@ module.exports = {
             name: 'vendor',
         }),
     ],
+    devtool: 'source-map',
+    devServer: {
+        historyApiFallback: true,
+    },
 };
