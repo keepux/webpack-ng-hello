@@ -22,6 +22,7 @@ module.exports = {
             },
             {
                 test: /\.ts$/,
+                enforce: 'pre', //enforce pre-processing ts files
                 loader: 'awesome-typescript-loader',
             },
         ],
