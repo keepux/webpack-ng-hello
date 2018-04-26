@@ -7,13 +7,12 @@ module.exports = {
         extensions: ['.js', '.ts'],
     },
     entry: {
-        polyfills: './src/pollyfills.ts',
-        main: './src/app.ts', //bundle entry point from ./src/
-        vendor: './src/vendor.js', // seperate vendor code from app
+        polyfills: './src/polyfills.ts',
+        main: './src/app.ts',
     },
     output: {
-        path: path.resolve(__dirname, 'dist'), //output directory
-        filename: '[name].js', // name of generated bundle
+        path: path.resolve(__dirname, 'dist'), // output directory
+        filename: '[name].js', // name of the generated bundle
     },
     module: {
         rules: [
@@ -23,26 +22,27 @@ module.exports = {
             },
             {
                 test: /\.ts$/,
-                enforce: 'pre', //enforce pre-processing ts files
                 loader: 'awesome-typescript-loader',
             },
             {
+                test: /\.ts$/,
+                enforce: 'pre',
+                loader: 'tslint-loader',
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+            },
+            {
                 test: /\.sass/,
-                loader: [
-                    'style-loader',
-                    'css-loader?sourceMap',
-                    'sass-loader?sourceMap',
-                ],
+                loader: ['raw-loader', 'sass-loader?sourceMap'],
             },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html', // from src
+            template: 'src/index.html',
             inject: 'body',
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
         }),
     ],
     devtool: 'source-map',
