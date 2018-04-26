@@ -5,6 +5,9 @@
     "repository": "git@github.com:keepux/webpack-ng-hello.git",
     "author": "Michael Neal <iammichaelneal@gmail.com>",
     "license": "MIT",
+    "scripts": {
+        "dev": "webpack-dev-server --config webpack.config.js"
+    },
     "devDependencies": {
         "@types/core-js": "^0.9.43",
         "@types/node": "^8.0.24",
