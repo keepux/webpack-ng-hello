@@ -25,6 +25,10 @@ module.exports = {
                 enforce: 'pre', //enforce pre-processing ts files
                 loader: 'awesome-typescript-loader',
             },
+            {
+                test: /\.sass/,
+                loader: ['style-loader', 'css-loader', 'sass-loader'],
+            },
         ],
     },
     plugins: [
