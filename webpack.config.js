@@ -3,8 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+    resolve: {
+        extensions: ['.js', '.ts'],
+    },
     entry: {
-        main: './src/app.js', //bundle entry point from ./src/
+        main: './src/app.ts', //bundle entry point from ./src/
         vendor: './src/vendor.js', // seperate vendor code from app
     },
     output: {
@@ -16,6 +19,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.ts$/,
+                loader: 'awesome-typescript-loader',
             },
         ],
     },
